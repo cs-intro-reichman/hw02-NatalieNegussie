@@ -10,9 +10,9 @@ public class Reverse {
 		int strLength = str.length();
 		int middle;
 		if(strLength%2==1)
-			middle = (strLength+1)/2;
+			middle = strLength/2;
 		else
-			middle = (strLength/2)+1;
+			middle = strLength/2;
 		for(int i=strLength-1; i>=0; i--){
 		    newStr = newStr + str.charAt(i);
 		}
