@@ -15,14 +15,14 @@ public class OneOfEachStats {
 		// Initailizes a random numbers generator with the given seed value
         Random generator = new Random(seed);  
 		
-				double average; 
-		int girlCounter=0, boyCounter=0, total=0, sum=0;
+		double average=0, sum=0; 
+		int girlCounter=0, boyCounter=0, total=0;
 		int twokids=0,threekids=0,fourkids=0;
-		int n = Integer.parseInt(args[0]);
-		for(int i=0; i<n; i++){
+		double gender=0;
+		for(int i=0; i<T; i++){
 		while((girlCounter<1)||(boyCounter<1)){
-			int gender=generator.nextInt();
-			if(gender <=4){
+			gender=generator.nextDouble();
+			if(gender <0.5){
 				girlCounter++;
 			}	
 			else{
@@ -47,7 +47,7 @@ public class OneOfEachStats {
 			boyCounter = 0;
 			
 		}
-		average= (double)sum/(double)n;
+		average= (double)sum/(double)T;
 		System.out.println("Average: " +average+" children to get at least one of each gender.");
 		System.out.println("Number of families with 2 children: " +twokids);
 		System.out.println("Number of families with 3 children: " +threekids);
@@ -62,17 +62,6 @@ public class OneOfEachStats {
 			System.out.println("The most common number of children is 4 or more.");
 		}
 		
-		
-		
-		//// In the previous version of this program, you used a statement like:
-		//// double rnd = Math.random();
-		//// Where "rnd" is the variable that stores the generated random value.
-		//// In this version of the program, replace this statement with:
-		//// double rnd = generator.nextDouble();
-		//// This statement will generate a random value in the range [0,1),
-		//// just like you had in the previous version, except that the 
-		//// randomization will be based on the given seed.
-		//// This is the only change that you have to do in the program.
 		    
 	}
 }
