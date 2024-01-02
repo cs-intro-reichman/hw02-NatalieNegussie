@@ -12,7 +12,7 @@ public class Reverse {
 		if(strLength%2==1)
 			middle = strLength/2;
 		else
-			middle = strLength/2;
+			middle = (strLength/2)+1;
 		for(int i=strLength-1; i>=0; i--){
 		    newStr = newStr + str.charAt(i);
 		}
