@@ -18,8 +18,8 @@ public class Perfect {
 		if(sum == number){
 			System.out.print(number+ " is a perfect number since " +number+ " = ");
 			for(int j=1; j<number;j++){
-			    count2++;
 			if (number%j==0){
+			    count2++;
 				System.out.print(j);
 				if(count1==count2)
 					System.out.print("");
