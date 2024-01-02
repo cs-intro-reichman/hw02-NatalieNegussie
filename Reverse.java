@@ -12,12 +12,11 @@ public class Reverse {
 		if(strLength%2==1)
 			middle = strLength/2;
 		else
-			middle = strLength/2;
-		char tav = str.charAt(middle);
+			middle = (strLength/2)-1;
 		for(int i=strLength-1; i>=0; i--){
 		    newStr = newStr + str.charAt(i);
 		}
 		System.out.println(newStr);
-		System.out.println("The middle character is "+ tav);	
+		System.out.println("The middle character is "+ newStr.charAt(middle));	
 	}
 }
